@@ -90,6 +90,7 @@ RUN set -x \
 	&& apk del .build-deps
 
 COPY httpd-foreground /usr/local/bin/
+COPY tde-httpd.conf /usr/local/apache2/conf/httpd.conf
 
 EXPOSE 80
 CMD ["httpd-foreground"]
